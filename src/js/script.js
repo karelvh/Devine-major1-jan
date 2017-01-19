@@ -1,7 +1,7 @@
-const init = () => {
+import homeHover from './lib/homeHover';
 
-  console.log(`Hello, major1-jan`);
+(() => {
 
-};
+  homeHover();
 
-init();
+})();

@@ -11,7 +11,7 @@
     WebFontConfig = {
       // https://github.com/typekit/webfontloader/blob/master/README.md
       google: {
-        families: ['Roboto']
+        families: ['Rubik:500,900']
       }
     };
 
@@ -23,14 +23,34 @@
     })(document);
 
   </script>
-  
+
 
 </head>
 
-<body>
+<body class="home" id="home">
 
   <header>
-    <h1>Hello, major1-jan</h1>
+    <nav class="nav">
+      <div class="nav-logo">の</div>
+      <span class="nav-company_name">company name</span>
+    </nav>
+    <main>
+      <section id="wrapper" class="wrapper">
+
+        <div class="content">
+          <h1 id="home-title" class="home-title-luxury">Looking for</h1>
+          <div class="secondary_titles">
+            <a href="#" id="home-secondary_titles-luxury">Luxury?</a>
+            <a href="#" id="home-secondary_titles-adventure">Adventure?</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <a class="link" href="#">Store</a>
+      <a class="link" href="#">Contact</a>
+      <a class="link" href="#">FAQ</a>
+    </footer>
   </header>
 
 </body>
