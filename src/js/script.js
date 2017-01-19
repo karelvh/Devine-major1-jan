@@ -1,6 +1,6 @@
 const init = () => {
 
-  console.log(`Hello, major1-jan`)
+  console.log(`Hello, major1-jan`);
 
 };
 
