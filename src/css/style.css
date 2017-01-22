@@ -13,6 +13,20 @@
   --home-spacer: 15rem;
 }
 
+@media screen and (width < 900px) {
+
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (width < 740px) {
+
+  html {
+    font-size: 30%;
+  }
+}
+
 body {
   font-family: 'Hiragino Sans', Arial, sans-serif;
   font-size: 3rem;
@@ -297,13 +311,13 @@ body {
         /*border-bottom: 1px solid transparent;*/
         transition: all .5s;
 
-        &:nth-child(2)::after {
-          content: '\ /';
+        &:nth-child(2)::before {
+          content: '\\ ';
           visibility: hidden;
         }
 
-        &:nth-child(2)::before {
-          content: '\\ ';
+        &:nth-child(2)::after {
+          content: '\ /';
           visibility: hidden;
         }
 
