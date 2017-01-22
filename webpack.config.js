@@ -28,7 +28,7 @@ const copy = new CopyWebpackPlugin([{
 });
 
 const config = {
-  
+
   // no HTML entry points for production build (bundled in JavaScript)
   entry: [
     require.resolve(`react-dev-utils/webpackHotDevClient`),
@@ -102,7 +102,7 @@ const config = {
         ]
       },
       {
-        test: /\.(svg|png|jpe?g|gif|webp)$/,
+        test: /\.(svg|png|jpe?g|gif|webp|wav)$/,
         loader: `url-loader`,
         options: {
           limit: 1000, // inline if < 1 kb
