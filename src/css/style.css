@@ -333,3 +333,20 @@ body {
     }
   }
 }
+
+.store {
+
+  & .logo_sign {
+    display: inline-block;
+    transform: rotate(180deg);
+    margin-right: 2rem;
+    font-size: 3rem;
+    transition: transform 1s;
+    color: var(--color-blue-light);
+
+    &:hover {
+      transform: rotate(540deg);
+      transition: transform 1s;
+    }
+  }
+}
