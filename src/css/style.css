@@ -14,8 +14,8 @@
 
   /*background style*/
   --background_dotted: {
-      background: url(../assets/img/plus_screen.png);
-      background-size: 7px;
+    background: url(../assets/img/plus_screen.png);
+    background-size: 7px;
   }
 }
 
@@ -64,6 +64,8 @@ body {
       color: var(--color-blue-dark);
       text-decoration: none;
       transition: all .5s;
+      border: none;
+      font-size: 2rem;
 
       &:nth-child(2)::before {
         content: '\\ ';
@@ -447,12 +449,19 @@ body {
     }
 
     & .most_popular {
-      display: flex;
+      /*display: flex;*/
+      justify-content: space-between;
+      margin-top: -2rem;
 
       & img {
-        max-width: 60rem;
-        width: 30rem;
-        height: 100%;
+        /*max-width: 75rem;*/
+        width: 63rem;
+        max-height: 100%;
+        position: absolute;
+        /*margin-right: -2rem;*/
+        margin-top: 4rem;
+        margin-left: -8rem;
+        z-index: 2;
       }
 
       & .most_popular_info {
@@ -461,8 +470,10 @@ body {
         flex-direction: column;
         justify-content: space-around;
         height: 55rem;
-        padding: 5rem;
+        padding: 5rem 10rem;
         width: 55rem;
+        margin-left: 35vh;
+        position: relative;
 
         & h3 {
           margin: 0;
