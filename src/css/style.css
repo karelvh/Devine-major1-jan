@@ -91,9 +91,7 @@ body {
         left: 0;
         max-height: 100%;
         transform: scaleX(-1) rotate(5deg);
-        filter: saturate(0%);
-        background-color: var(--color-blue-light);
-        mix-blend-mode: luminosity;
+        filter: sepia(1) hue-rotate(145deg);
       }
     }
 
@@ -255,6 +253,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        background: linear-gradient(to bottom, var(--color-blue-light), #bce9f1);
       }
 
       & .pic {
@@ -262,8 +261,8 @@ body {
         height: 30rem;
         overflow: hidden;
         position: relative;
-        filter: saturate(0%);
-        transition: all .5s;
+        filter: sepia(1) hue-rotate(145deg);
+        transition: all .1s;
 
         & img {
           display: block;
@@ -276,8 +275,8 @@ body {
         }
 
         &:hover {
-          filter: saturate(100%);
-          transition: all .5s;
+          filter: none;
+          transition: all .1s;
 
           & img {
             transform: translateZ(0) scale(1);
