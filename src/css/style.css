@@ -315,12 +315,36 @@ body {
         filter: sepia(1) hue-rotate(145deg);
         transition: all .1s;
 
+        &:nth-child(1) img {
+          top: -28rem;
+          left: -58rem;
+        }
+
+        &:nth-child(2) img,
+        &:nth-child(3) img {
+          top: -8rem;
+          left: -63rem;
+        }
+
+        &:nth-child(4) img {
+          top: -8rem;
+          left: -67rem;
+        }
+
+        &:nth-child(5) img {
+          top: -8rem;
+          left: -69rem;
+        }
+
+        &:nth-child(6) img {
+          top: -8rem;
+          left: -69rem;
+        }
+
         & img {
           display: block;
           position: absolute;
-          top: 5rem;
-          left: -5rem;
-          transform: translateZ(0) scale(.9);
+          transform: translateZ(0) scale(.3);
           transition: all .5s;
           backface-visibility: hidden;
         }
@@ -330,10 +354,31 @@ body {
           transition: all .1s;
 
           & img {
-            transform: translateZ(0) scale(1);
+            transform: translateZ(0) scale(.45);
             /*top: 7rem;*/
             /*left: 0;*/
             transition: all .5s;
+          }
+
+          &:nth-child(1) img {
+            left: -63rem;
+          }
+
+          &:nth-child(2) img {
+            left: -55rem;
+          }
+
+          &:nth-child(3) img {
+            transform: translateZ(0) scale(.35);
+            left: -61rem;
+          }
+
+          &:nth-child(4) img {
+            left: -60rem;
+          }
+
+          &:nth-child(5) img {
+            left: -65rem;
           }
         }
       }
@@ -381,7 +426,7 @@ body {
   }
 
   & img {
-    filter: sepia(1) hue-rotate(145deg);
+    filter: sepia(.5) hue-rotate(175deg);
     transition: all .1s;
 
     &:hover {
@@ -455,11 +500,13 @@ body {
 
       & img {
         /*max-width: 75rem;*/
-        width: 63rem;
-        max-height: 100%;
+        max-width: 63rem;
+        max-height: 63rem;
+        width: auto;
+        height: auto;
         position: absolute;
         /*margin-right: -2rem;*/
-        margin-top: 4rem;
+        margin-top: 8rem;
         margin-left: -8rem;
         z-index: 2;
       }
@@ -487,6 +534,23 @@ body {
         & a {
           align-self: flex-start;
         }
+      }
+    }
+  }
+
+  & .customizations {
+    margin-top: 8rem;
+
+    & .customize_header {
+      @apply --background_dotted;
+
+      & h2 {
+        font-family: Rubik;
+        font-weight: 700;
+        font-size: 4rem;
+        color: var(--color-blue-light);
+        text-align: center;
+        padding-top: 3rem;
       }
     }
   }
