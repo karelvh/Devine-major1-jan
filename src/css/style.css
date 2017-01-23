@@ -19,6 +19,10 @@
   }
 }
 
+/*||=============||*/
+/*||GENERAL STUFF||*/
+/*||=============||*/
+
 @media screen and (width < 900px) {
 
   html {
@@ -93,6 +97,25 @@ body {
   }
 }
 
+@keyframes rotateCircle {
+
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(360deg) scale(1.1);
+
+  }
+
+  100% {
+    transform: rotate(720deg) scale(1);
+  }
+}
+
+/*||============||*/
+/*||PAGE STYLING||*/
+/*||============||*/
 .home {
 
   & .header {
@@ -198,20 +221,49 @@ body {
       align-items: center;
       justify-content: space-between;
 
+      & .link {
+        position: relative;
+
+        & a,
+        & a:hover {
+          border: none;
+        }
+
+        & .bg {
+          background: url(../assets/svg/circle.svg) no-repeat left top;
+          background-size: 7.8rem;
+          width: 7.8rem;
+          height: 7.8rem;
+          position: absolute;
+          left: 1.3rem;
+          top: -1.7rem;
+          transition: all .5s;
+          opacity: 0;
+          animation: rotateCircle 10s linear infinite;
+        }
+
+        &:hover .bg {
+          opacity: 1;
+        }
+
+      }
+
       & a {
         color: var(--color-white);
         text-decoration: none;
-        padding: 1rem;
-        display: inline-block;
-        border: 3px solid transparent;
+        padding: .5rem;
+        display: block;
+        border-bottom: 3px solid transparent;
         transition: all .5s;
+        position: relative;
+        text-align: center;
 
         &:hover {
-          border: 3px solid var(--color-white);
+          border-color: var(--color-white);
         }
       }
 
-      & a:nth-child(2) {
+      & .link:nth-child(2) a {
         font-size: 3rem;
         font-weight: 700;
       }
