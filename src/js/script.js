@@ -1,13 +1,11 @@
-(() => {
+import favicon from './lib/favicon';
+import storeShowcase from './lib/storeShowcase';
 
-  console.log(`hey`);
+const init = () => {
 
-  const $favicon = document.querySelector(`#favicon`);
-  const title = document.title;
-  const newTitle = `Adventure awaits!`;
-  document.addEventListener(`visibilitychange`, function() {
-    document.title = document.hidden ? newTitle : title;
-    document.hidden ? $favicon.href = `./assets/img/logor.ico` : $favicon.href = `./assets/img/logob.ico`;
-  });
+  favicon();
+  storeShowcase();
 
-})();
+};
+
+init();
