@@ -509,7 +509,7 @@ body {
       display: inline-block;
       transform: rotate(180deg);
       margin-right: 2rem;
-      font-size: 3rem;
+      font-size: 3.5rem;
       transition: transform 1s;
       color: var(--color-blue-light);
       border: none;
@@ -531,8 +531,8 @@ body {
 
       & li a {
         color: var(--color-blue-light);
-        margin-left: 10rem;
-        font-weight: 400;
+        margin-left: 5rem;
+        font-weight: 300;
 
         &:hover {
           border-color: var(--color-blue-light);
@@ -579,7 +579,7 @@ body {
         height: 55rem;
         padding: 5rem 10rem;
         width: 55rem;
-        margin-left: 35vh;
+        margin-left: 50vh;
         position: relative;
 
         & h3 {
