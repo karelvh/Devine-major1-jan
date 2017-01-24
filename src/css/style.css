@@ -37,6 +37,13 @@
   }
 }
 
+@media screen and (width < 500px) {
+
+  .home .header .header_content img {
+    display: none;
+  }
+}
+
 body {
   font-family: 'Hiragino Sans', Arial, sans-serif;
   font-size: 3rem;
@@ -50,6 +57,49 @@ body {
 
 .hide {
   display: none;
+}
+
+.nav {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10rem;
+
+  & .logo_sign {
+    display: inline-block;
+    transform: rotate(180deg);
+    margin-right: 2rem;
+    font-size: 3.5rem;
+    transition: transform 1s;
+    color: var(--color-blue-light);
+    border: none;
+
+    &:hover {
+      transform: rotate(540deg);
+      transition: transform 1s;
+    }
+  }
+
+  & ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & .active {
+      border-color: var(--color-blue-light);
+    }
+
+    & li a {
+      color: var(--color-blue-light);
+      margin-left: 5rem;
+      font-weight: 300;
+
+      &:hover {
+        border-color: var(--color-blue-light);
+      }
+    }
+  }
 }
 
 .footer {
@@ -76,7 +126,7 @@ body {
       font-size: 2rem;
 
       &:nth-child(2)::before {
-        content: 'woooo \\ ';
+        content: 'woo \\ ';
         visibility: hidden;
       }
 
@@ -116,6 +166,8 @@ body {
 /*||============||*/
 /*||PAGE STYLING||*/
 /*||============||*/
+
+/*NOTICE: This CSS is written in a way (with every style related to a page wrapped in a class (.store for example) related to that page) where we can use simple class names and reuse those on different pages, even though the styling might be completly different. That way an element doesn't get multiple styles that overwrite each other. There are some genereal classes though (like the .footer, nav and so on) that have the exact same styling on multiple pages.*/
 .home {
 
   & .header {
@@ -229,20 +281,31 @@ body {
           border: none;
         }
 
-        & .bg {
-          background: url(../assets/svg/circle.svg) no-repeat left top;
+        & .bg_white,
+        & .bg_blue {
           background-size: 7.8rem;
           width: 7.8rem;
           height: 7.8rem;
           position: absolute;
-          left: 1.3rem;
-          top: -1.7rem;
           transition: all .5s;
           opacity: 0;
           animation: rotateCircle 10s linear infinite;
         }
 
-        &:hover .bg {
+        & .bg_white {
+          background: url(../assets/svg/circle_white.svg) no-repeat left top;
+          left: 1.3rem;
+          top: -1.7rem;
+        }
+
+        & .bg_blue {
+          background: url(../assets/svg/circle_blue.svg) no-repeat left top;
+          left: 1.4rem;
+          top: -1.8rem;
+        }
+
+        &:hover .bg_white,
+        &:hover .bg_blue {
           opacity: 1;
         }
 
@@ -361,6 +424,7 @@ body {
         justify-content: space-between;
         align-items: center;
         background: linear-gradient(to bottom, var(--color-blue-light), #bce9f1);
+        border-radius: .4rem;
       }
 
       & .pic {
@@ -498,49 +562,6 @@ body {
     margin: 3rem 0;
   }
 
-  & .nav {
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 10rem;
-
-    & .logo_sign {
-      display: inline-block;
-      transform: rotate(180deg);
-      margin-right: 2rem;
-      font-size: 3.5rem;
-      transition: transform 1s;
-      color: var(--color-blue-light);
-      border: none;
-
-      &:hover {
-        transform: rotate(540deg);
-        transition: transform 1s;
-      }
-    }
-
-    & ul {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      & .active {
-        border-color: var(--color-blue-light);
-      }
-
-      & li a {
-        color: var(--color-blue-light);
-        margin-left: 5rem;
-        font-weight: 300;
-
-        &:hover {
-          border-color: var(--color-blue-light);
-        }
-      }
-    }
-  }
-
   & .header {
 
     & h1 {
@@ -554,8 +575,6 @@ body {
     }
 
     & .most_popular {
-      /*display: flex;*/
-      justify-content: space-between;
       margin-top: -2rem;
 
       & img {
@@ -650,33 +669,24 @@ body {
       max-height: 55rem;
       margin-bottom: 15rem;
 
-      & .package_wrapper {
-        /*overflow: hidden;
+      /*& .package_wrapper {*/
+
+      & .package_info {
+        flex-direction: column;
+        height: 40rem;
         width: 33rem;
-        max-height: 36rem;*/
 
-        & .package_info {
-          /*align-self: flex-start;*/
-          /*display: flex;*/
-          flex-direction: column;
-          /*justify-content: space-around;*/
-          /*height: 25rem;*/
-          /*padding: 5rem;*/
-          height: 40rem;
-          width: 33rem;
+        position: relative;
 
-          position: relative;
+        & h2 {
+          margin-bottom: 3rem;
+        }
 
-          & h2 {
-            margin-bottom: 3rem;
-          }
-
-          & a {
-            align-self: flex-start;
-            /*margin-bottom: 3.8rem;*/
-          }
+        & a {
+          align-self: flex-start;
         }
       }
+      /*}*/
 
       & .customize_custom {
         /*align-self: flex-end;*/
