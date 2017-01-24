@@ -452,8 +452,8 @@ body {
         }
 
         &:nth-child(5) img {
-          top: -8rem;
-          left: -69rem;
+          top: -11rem;
+          left: -71rem;
         }
 
         &:nth-child(6) img {
@@ -498,6 +498,10 @@ body {
           }
 
           &:nth-child(5) img {
+            left: -69rem;
+          }
+
+          &:nth-child(6) img {
             left: -65rem;
           }
         }
