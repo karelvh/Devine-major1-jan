@@ -9,11 +9,12 @@ const ExtractTextWebpackPlugin = require(`extract-text-webpack-plugin`);
 const configHtmls = require(`webpack-config-htmls`)();
 
 const extractCSS = new ExtractTextWebpackPlugin(`css/style.css`);
+const BrowserSyncPlugin = require(`browser-sync-webpack-plugin`);
 
 // change for production build on different server path
 const publicPath = `/`;
 
-const port = 3000;
+const port = 3100;
 
 // hard copy assets folder for:
 // - srcset images (not loaded through html-loader )
@@ -123,7 +124,25 @@ const config = {
   },
 
   plugins: [
-    new HotModuleReplacementPlugin()
+    new HotModuleReplacementPlugin(),
+    new BrowserSyncPlugin(
+      // BrowserSync options
+      {
+        // browse to http://localhost:3100/ during development
+        host: `localhost`,
+        port: 3000,
+        // proxy the Webpack Dev Server endpoint
+        // (which should be serving on http://localhost:3000/)
+        // through BrowserSync
+        proxy: `http://localhost:3100/`
+      },
+      // plugin options
+      {
+        // prevent BrowserSync from reloading the page
+        // and let Webpack Dev Server take care of this
+        reload: false
+      }
+    )
   ]
 
 };
