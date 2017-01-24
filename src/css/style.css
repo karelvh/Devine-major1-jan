@@ -525,6 +525,10 @@ body {
       align-items: center;
       justify-content: space-between;
 
+      & .active {
+        border-color: var(--color-blue-light);
+      }
+
       & li a {
         color: var(--color-blue-light);
         margin-left: 10rem;
