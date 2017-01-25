@@ -12,7 +12,8 @@ const extractCSS = new ExtractTextWebpackPlugin(`css/style.css`);
 const BrowserSyncPlugin = require(`browser-sync-webpack-plugin`);
 
 // change for production build on different server path
-const publicPath = `/karel.van.haeverbe1/major1/`;
+const publicPathRemote = `/karel.van.haeverbe1/major1/`;
+const publicPathLocal = `/`;
 
 const port = 3100;
 
@@ -45,7 +46,7 @@ const config = {
   output: {
     path: path.join(__dirname, `dist`),
     filename: `js/[name].[hash].js`,
-    publicPath
+    // publicPath
   },
 
   devtool: `source-map`,
@@ -149,6 +150,8 @@ const config = {
 
 if (process.env.NODE_ENV === `production`) {
 
+  config.output.publicPath = publicPathRemote;
+
   //remove hot reloading client
   config.entry.shift();
 
@@ -186,6 +189,8 @@ if (process.env.NODE_ENV === `production`) {
   ];
 
 } else {
+
+  config.output.publicPath = publicPathLocal;
 
   // only include HTMLs in NODE_ENV=development
   // for Hot Reloading

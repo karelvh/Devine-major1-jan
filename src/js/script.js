@@ -8,7 +8,7 @@ const init = () => {
 
   favicon();
 
-  if (document.querySelector(`#store`)) {
+  if (document.querySelector(`.store`)) {
     import(`./lib/storeShowcase`).then(module => {module.default();}).catch(errorLoading);
   }
 
