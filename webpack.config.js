@@ -12,7 +12,7 @@ const extractCSS = new ExtractTextWebpackPlugin(`css/style.css`);
 const BrowserSyncPlugin = require(`browser-sync-webpack-plugin`);
 
 // change for production build on different server path
-const publicPath = `/`;
+const publicPath = `/karel.van.haeverbe1/major1/`;
 
 const port = 3100;
 
