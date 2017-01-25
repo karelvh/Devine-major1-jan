@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="34px" viewBox="0 0 46 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>mail</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="5" y="0.250053996" width="46" height="34.0994048"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="46" height="34.0994048" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <polygon id="path-3" points="27.9948945 0.160296953 55.8120364 19.162162 0.187963599 19.2165159"></polygon>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="55.6240728" height="19.056219" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="mail" stroke="#5C84AD" stroke-width="8">
+            <g transform="translate(-5.000000, 0.000000)">
+                <use id="Rectangle-2" mask="url(#mask-2)" xlink:href="#path-1"></use>
+                <use id="Triangle-2" mask="url(#mask-4)" transform="translate(28.000000, 9.688406) scale(1, -1) translate(-28.000000, -9.688406) " xlink:href="#path-3"></use>
+            </g>
+        </g>
+    </g>
+</svg>
