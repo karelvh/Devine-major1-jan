@@ -104,7 +104,7 @@ h3 {
     transform: rotate(180deg);
     margin-right: 2rem;
     font-size: 3.5rem;
-    transition: transform 1s;
+    /*transition: transform 1s;*/
     color: var(--color-blue-light);
     border: none;
     text-decoration: none;
@@ -203,8 +203,6 @@ h3 {
 /*||============||*/
 /*||PAGE STYLING||*/
 /*||============||*/
-
-/*NOTICE: This CSS is written in a way (with every style related to a page wrapped in a class (.store for example) related to that page) where we can use simple class names and reuse those on different pages, even though the styling might be completly different. That way an element doesn't get multiple styles that overwrite each other. There are some genereal classes though (like the .footer, nav and so on) that have the exact same styling on multiple pages.*/
 .home {
 
   & .header {
@@ -243,7 +241,7 @@ h3 {
       transform: rotate(180deg);
       margin-right: 2rem;
       font-size: 5rem;
-      transition: transform 1s;
+      /*transition: transform 1s;*/
     }
 
     & .header_content {
@@ -332,13 +330,13 @@ h3 {
         & .bg_white {
           /*background: url(../assets/svg/circle_white.svg) no-repeat left top;*/
           left: 1.3rem;
-          top: -1.7rem;
+          top: -1.8rem;
         }
 
         & .bg_blue {
           /*background: url(../assets/svg/circle_blue.svg) no-repeat left top;*/
           left: 1.4rem;
-          top: -1.8rem;
+          top: -1.9rem;
         }
 
         &:hover .bg_white,
@@ -580,13 +578,14 @@ h3 {
     color: var(--color-pink-dark);
     text-decoration: none;
     border-bottom: .3rem solid transparent;
+    z-index: 2;
 
     &:hover {
       border-color: var(--color-pink-dark);
     }
   }
 
-  & img {
+  /*& img {
     filter: sepia(.5) hue-rotate(175deg);
     transition: all .1s;
 
@@ -594,7 +593,7 @@ h3 {
       filter: none;
       transition: .1s;
     }
-  }
+  }*/
 
   & .price {
     font-family: Rubik;
@@ -619,16 +618,25 @@ h3 {
       margin-top: -2rem;
 
       & img {
-        /*max-width: 75rem;*/
+        height: auto;
+        width: auto;
+        position: absolute;
+      }
+
+      & .chopper {
+        max-width: 30rem;
+        max-height: 30rem;
+        transform: rotate(24deg);
+        margin-top: 4rem;
+        margin-left: -13rem;
+      }
+
+      & .apartment {
         max-width: 63rem;
         max-height: 63rem;
-        width: auto;
-        height: auto;
-        position: absolute;
-        /*margin-right: -2rem;*/
         margin-top: 8rem;
         margin-left: -8rem;
-        z-index: 2;
+        z-index: 1;
       }
 
       & .most_popular_info {
@@ -683,7 +691,7 @@ h3 {
           width: 94rem;
         }
 
-        & img:nth-child(1),
+        /*& img:nth-child(1),
         & img:nth-child(2),
         & img:nth-child(3),
         & img:nth-child(4),
@@ -693,7 +701,7 @@ h3 {
           &:hover {
             filter: none;
           }
-        }
+        }*/
 
       }
     }
@@ -790,7 +798,6 @@ h3 {
         display: inline-block;
         font-size: 3rem;
         font-weight: 600;
-        animation: reverse rotateCircle 200s linear infinite;
       }
 
       & .bg_blue {
@@ -798,7 +805,7 @@ h3 {
         width: 7.8rem;
         height: 7.8rem;
         left: -2.9rem;
-        top: -2.5rem;
+        top: -2.6rem;
       }
     }
 
@@ -815,46 +822,6 @@ h3 {
       font-size: 2rem;
       font-weight: 500;
       margin-bottom: 7rem;
-    }
-  }
-}
-
-.message {
-
-  & .main {
-    min-height: 85vh;
-    margin: 0 auto 9rem;
-    max-width: 70rem;
-    line-height: 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    & h1 {
-      color: var(--color-blue-dark);
-      font-weight: 700;
-      line-height: 4rem;
-      text-align: center;
-      background: white;
-    }
-
-    & .bg_circle {
-
-      & span {
-        display: inline-block;
-        font-size: 3rem;
-        font-weight: 600;
-      }
-
-      & .bg_blue {
-        background-size: 20rem;
-        width: 20rem;
-        height: 20rem;
-        left: 25rem;
-        top: -6rem;
-        z-index: -1;
-        animation: rotateCircle 60s linear infinite;
-      }
     }
   }
 }
